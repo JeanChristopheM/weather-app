@@ -1,0 +1,49 @@
+@import 'reset';
+@import 'vars';
+#root {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0 2px 5px black;
+}
+.header {
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        padding-block: 1rem;
+    }
+    select {
+        border: 1px solid #ccc;
+        position: relative;
+        padding: .5rem;
+        background-color: white;
+        width: 100%;
+        &::after {
+            right: -20px;
+            content:'';
+            background-color: red;
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+.main {
+    position: relative;
+    padding-block: 1rem;
+    min-height: 100px;
+    &::after {
+        content: '⛅';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 100px;
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    img {
+        max-width: 100%;
+    }
+}
